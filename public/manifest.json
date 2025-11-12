@@ -1,0 +1,17 @@
+{
+    "manifest_version" : 3,
+    "name" : "Youtube Auto Pause",
+    "version" : "1.0",
+    "description": "Auto pauses youtube videos whenever it loses focus",
+    "content_scripts":[
+        {
+            "matches":["*://www.youtube.com/*"],
+            "js":["content.js"],
+            "run at":"document_idle"
+        }
+    ],
+    "permissions":["storage"],
+    "action":
+        {"default_popup":"popup/popup.html"}
+    
+}
